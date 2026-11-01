@@ -138,6 +138,13 @@ figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--line)
 figure.fig figcaption{font:500 12px/1.6 var(--mono);color:var(--faint);margin-top:8px}
 
 
+
+/* 指数条九格适配（2026-11-01）：等宽均分单行，窄屏换行 */
+.rule-banner.cards{grid-template-columns:repeat(var(--n,6),minmax(0,1fr))}
+.rule-banner .rule{padding:20px 14px}
+.rule-banner .big{font-size:clamp(17px,1.7vw,24px)}
+@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.rule-banner.cards{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
