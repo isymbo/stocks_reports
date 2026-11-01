@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stocks Reports · 三地市场报告</title>
+<style>
+:root{--ink:#1a1a1a;--red:#c0392b;--teal:#1f5c4f;--bg:#faf8f4;--line:#e4ded3;--mute:#7a746a}
+@media (prefers-color-scheme:dark){:root{--ink:#ece8e1;--bg:#151515;--line:#333;--mute:#9a948a;--red:#e0605a;--teal:#5fb3a0}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+.w{max-width:760px;margin:0 auto;padding:48px 20px}
+.eb{letter-spacing:.2em;font-size:12px;color:var(--red);font-weight:700}
+h1{font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:44px;margin:.2em 0 .1em}
+.dek{color:var(--mute);margin-bottom:32px;border-bottom:3px double var(--line);padding-bottom:20px}
+ul{list-style:none;padding:0;margin:0}
+li a{display:flex;gap:14px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+li a:hover{background:rgba(192,57,43,.05)}
+.d{font-variant-numeric:tabular-nums;color:var(--mute);min-width:96px}
+.k{font-size:12px;font-weight:700;padding:2px 8px;border-radius:3px;color:#fff;white-space:nowrap}
+.k-m{background:var(--red)}.k-e{background:var(--teal)}.k-w{background:var(--ink);color:var(--bg)}
+.t{font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:17px}
+.empty{color:var(--mute);padding:18px 4px;border-bottom:1px solid var(--line)}
+footer{margin-top:40px;font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="eb">MARKET BRIEFINGS</div>
+<h1>Stocks Reports</h1>
+<div class="dek">A股 · 港股 · 美股 的每日早报、晚报和周末版，最新的在最上面。由 Juno 生成。</div>
+<ul>
+<!-- REPORTS: newest first. Insert each new report as the first <li> below this comment. -->
+<li class="empty">第一期报告将于下个交易日早报发布。</li>
+</ul>
+<footer>数据均经双源核验；核验不了的数字不写或标注未核实。本页内容不构成投资建议。</footer>
+</div>
+</body>
+</html>
