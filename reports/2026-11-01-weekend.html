@@ -7,8 +7,8 @@
 <link rel="icon" href="data:," />
 <title>三地市场周末版 10月26日至30日这一周</title>
 <style>
-:root{color-scheme:light dark;--bg:#f4f5f2;--paper:#fff;--ink:#152125;--muted:#586469;--faint:#7b8589;--line:#d8ddda;--accent:#b51f29;--accent-2:#0f6667;--serif:"Noto Serif SC","Songti SC","STSong",serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace;--up:#b51f29;--down:#13804b}
-@media(prefers-color-scheme:dark){:root{--bg:#0d1518;--paper:#121d21;--ink:#edf2ef;--muted:#b4c0bd;--faint:#899693;--line:#2d3b3f;--accent:#ed6870;--accent-2:#65c1bc;--up:#ed6870;--down:#4cc38a}}
+:root{color-scheme:light dark;--bg:#f4f5f2;--paper:#fff;--ink:#152125;--muted:#586469;--faint:#7b8589;--line:#d8ddda;--accent:#b51f29;--accent-2:#0f6667;--code:#122227;--code-ink:#edf3ef;--radius:14px;--serif:"Noto Serif SC","Songti SC","STSong",serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace;--up:#b51f29;--down:#13804b}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1518;--paper:#121d21;--ink:#edf2ef;--muted:#b4c0bd;--faint:#899693;--line:#2d3b3f;--accent:#ed6870;--accent-2:#65c1bc;--code:#071013;--code-ink:#e8f1ee;--up:#ed6870;--down:#4cc38a}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.72}
 a{color:var(--accent-2)}a:hover{color:var(--accent)}
 .wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
@@ -33,6 +33,19 @@ th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;verti
 th{font-size:12.5px;color:var(--muted)}
 .up{color:var(--up)}.down{color:var(--down)}
 .src{color:var(--faint);font-size:13px}
+.rule-banner{display:grid;background:var(--code);color:var(--code-ink);border-radius:var(--radius);overflow:hidden;margin:24px 0 6px}
+.rule-banner.cards{grid-template-columns:repeat(var(--n,6),1fr)}
+.rule-banner .rule{padding:22px;border-right:1px solid rgba(255,255,255,.15)}
+.rule-banner .rule:last-child{border-right:0}
+.rule-banner .big{font:700 clamp(20px,2.2vw,28px)/1 var(--mono);color:var(--code-ink)}
+.rule-banner small{display:block;margin-top:9px;color:#b8c7c4;font-size:13px}
+.rule-banner .when{font:700 13px/1.3 var(--mono);margin-top:10px;color:#9fb6b2}
+.rule-banner .rule.up .when{color:#ff8d94}
+.rule-banner .rule.dn .when{color:#6fdc9a}
+.rule-banner .rule.up{box-shadow:inset 0 3px 0 #ff8d94}
+.rule-banner .rule.dn{box-shadow:inset 0 3px 0 #6fdc9a}
+@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}.rule-banner .rule{border-bottom:1px solid rgba(255,255,255,.15)}.rule-banner .rule:nth-child(3n){border-right:0}}
+@media(max-width:680px){.rule-banner.cards{grid-template-columns:1fr 1fr}.rule-banner .rule:nth-child(3n){border-right:1px solid rgba(255,255,255,.15)}.rule-banner .rule:nth-child(2n){border-right:0}.rule-banner .rule{padding:17px}}
 footer{padding:26px 0 50px;color:var(--faint);font-size:12.5px}
 </style>
 </head>
@@ -44,6 +57,8 @@ footer{padding:26px 0 50px;color:var(--faint);font-size:12.5px}
 <div class="back"><a href="../index.html">← 全部报告</a></div>
 </div></header>
 <main class="wrap">
+
+<div class="rule-banner cards" style="--n:6" aria-label="核心指标"><div class="rule dn"><div class="big">3599.02</div><small>上证指数</small><div class="when">周跌 2.48%</div></div><div class="rule dn"><div class="big">2413.63</div><small>创业板指</small><div class="when">周跌 10.08%</div></div><div class="rule up"><div class="big">23294.42</div><small>恒生指数</small><div class="when">周涨 0.87%</div></div><div class="rule dn"><div class="big">7580.07</div><small>标普500</small><div class="when">周跌 0.57%</div></div><div class="rule dn"><div class="big">25437.00</div><small>纳斯达克</small><div class="when">周跌 2.00%</div></div><div class="rule up"><div class="big">117.64</div><small>布伦特原油</small><div class="when">周涨 0.79%</div></div></div>
 
 <section class="section" id="takeaways">
 <div class="kicker">00 / KEY TAKEAWAYS</div>
@@ -121,7 +136,7 @@ footer{padding:26px 0 50px;color:var(--faint);font-size:12.5px}
 <table>
 <tr><th>资产</th><th>水平</th><th>备注</th></tr>
 <tr><td>10 年期美债收益率</td><td>约 4.93%</td><td>周三议息日一度在 5.0% 上方，周五随股市下跌回落</td></tr>
-<tr><td>布伦特原油</td><td>约 117 美元/桶</td><td>中东供应扰动支撑，处年内高位区</td></tr>
+<tr><td>布伦特原油</td><td>117.64 美元/桶（12 月合约）</td><td>周涨约 0.79%；中东供应扰动支撑，处年内高位区</td></tr>
 <tr><td>COMEX 黄金</td><td>约 3886 美元/盎司</td><td>10 月累跌约 6.5%，月末明显回吐</td></tr>
 <tr><td>VIX</td><td>约 19.4</td><td>与上周基本持平，未进入恐慌区</td></tr>
 </table>
