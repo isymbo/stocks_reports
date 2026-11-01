@@ -139,11 +139,11 @@ figure.fig figcaption{font:500 12px/1.6 var(--mono);color:var(--faint);margin-to
 
 
 
-/* 指数条九格适配 v2（2026-11-01）：等宽均分单行，数字按视口收窄防溢出，窄屏换行 */
+/* 指数条九格适配 v3（2026-11-01）：等宽均分单行，数字按视口收窄防溢出，窄屏换行 */
 .rule-banner.cards{grid-template-columns:repeat(var(--n,6),minmax(0,1fr))}
 .rule-banner .rule{padding:20px 12px;min-width:0}
-.rule-banner .big{font-size:clamp(14.5px,1.35vw,20px);letter-spacing:-.01em;white-space:nowrap}
-@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}.rule-banner .big{font-size:20px}}
+.rule-banner.cards .rule .big{font-size:clamp(14.5px,1.35vw,20px);letter-spacing:-.01em;white-space:nowrap}
+@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}.rule-banner.cards .rule .big{font-size:20px}}
 @media(max-width:680px){.rule-banner.cards{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
