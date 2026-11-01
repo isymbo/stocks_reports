@@ -6,189 +6,299 @@
 <meta name="color-scheme" content="light dark" />
 <link rel="icon" href="data:," />
 <title>三地市场周末版 10月26日至30日这一周</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light dark;--bg:#f4f5f2;--paper:#fff;--ink:#152125;--muted:#586469;--faint:#7b8589;--line:#d8ddda;--accent:#b51f29;--accent-2:#0f6667;--code:#122227;--code-ink:#edf3ef;--radius:14px;--serif:"Noto Serif SC","Songti SC","STSong",serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace;--up:#b51f29;--down:#13804b}
-@media(prefers-color-scheme:dark){:root{--bg:#0d1518;--paper:#121d21;--ink:#edf2ef;--muted:#b4c0bd;--faint:#899693;--line:#2d3b3f;--accent:#ed6870;--accent-2:#65c1bc;--code:#071013;--code-ink:#e8f1ee;--up:#ed6870;--down:#4cc38a}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.72}
-a{color:var(--accent-2)}a:hover{color:var(--accent)}
-.wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
-.mast{padding:56px 0 28px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--paper),var(--bg))}
-.edition{font:600 12px/1.2 var(--mono);letter-spacing:.12em;color:var(--accent);margin-bottom:16px}
-.mast h1{font:900 clamp(32px,5vw,58px)/1.12 var(--serif);margin:0 0 18px}
-.dek{font-size:clamp(16px,2vw,20px);color:var(--muted);margin:0;max-width:800px}
-.back{margin-top:18px;font-size:13px}
-main{padding:30px 0 70px}
-.section{padding:44px 0;border-bottom:1px solid var(--line)}
-.kicker{font:600 12px/1.2 var(--mono);letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
-h2{font:700 clamp(24px,3vw,34px)/1.25 var(--serif);margin:0 0 18px}
-h3{font-size:19px;margin:26px 0 10px}
-.keyview{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent);padding:22px 24px;font-size:17px}
-.takeaways{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
-.card{background:var(--paper);border:1px solid var(--line);padding:16px 18px}
-.card .n{font:600 11px var(--mono);color:var(--accent)}
-.card h3{margin:6px 0 8px;font-size:17px}
-.card p{margin:0;color:var(--muted);font-size:14.5px}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
-th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-th{font-size:12.5px;color:var(--muted)}
-.up{color:var(--up)}.down{color:var(--down)}
-.src{color:var(--faint);font-size:13px}
-.rule-banner{display:grid;background:var(--code);color:var(--code-ink);border-radius:var(--radius);overflow:hidden;margin:24px 0 6px}
-.rule-banner.cards{grid-template-columns:repeat(var(--n,6),1fr)}
-.rule-banner .rule{padding:22px;border-right:1px solid rgba(255,255,255,.15)}
-.rule-banner .rule:last-child{border-right:0}
-.rule-banner .big{font:700 clamp(20px,2.2vw,28px)/1 var(--mono);color:var(--code-ink)}
-.rule-banner small{display:block;margin-top:9px;color:#b8c7c4;font-size:13px}
-.rule-banner .when{font:700 13px/1.3 var(--mono);margin-top:10px;color:#9fb6b2}
-.rule-banner .rule.up .when{color:#ff8d94}
-.rule-banner .rule.dn .when{color:#6fdc9a}
-.rule-banner .rule.up{box-shadow:inset 0 3px 0 #ff8d94}
-.rule-banner .rule.dn{box-shadow:inset 0 3px 0 #6fdc9a}
-@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}.rule-banner .rule{border-bottom:1px solid rgba(255,255,255,.15)}.rule-banner .rule:nth-child(3n){border-right:0}}
-@media(max-width:680px){.rule-banner.cards{grid-template-columns:1fr 1fr}.rule-banner .rule:nth-child(3n){border-right:1px solid rgba(255,255,255,.15)}.rule-banner .rule:nth-child(2n){border-right:0}.rule-banner .rule{padding:17px}}
-footer{padding:26px 0 50px;color:var(--faint);font-size:12.5px}
+
+:root{
+      color-scheme:light dark;
+      --bg:#f4f5f2;--paper:#fff;--ink:#152125;--muted:#586469;--faint:#7b8589;
+      --line:#d8ddda;--line-strong:#aeb9b5;--accent:#b51f29;--accent-2:#0f6667;
+      --accent-soft:#f7e7e8;--teal-soft:#e5f1ef;--amber:#a96700;--amber-soft:#f8edd8;
+      --navy:#17303a;--code:#122227;--code-ink:#edf3ef;--shadow:0 16px 42px rgba(30,43,47,.09);
+      --radius:14px;--serif:"Noto Serif SC","Noto Serif CJK SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;--sans:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;--mono:"IBM Plex Mono","SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;--up:#b51f29;--down:#13804b;--down-soft:#e3f2e8;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#0d1518;--paper:#121d21;--ink:#edf2ef;--muted:#b4c0bd;--faint:#899693;
+        --line:#2d3b3f;--line-strong:#506166;--accent:#ed6870;--accent-2:#65c1bc;
+        --accent-soft:#3a1c20;--teal-soft:#163231;--amber:#f0b65c;--amber-soft:#352919;
+        --navy:#d8e9e7;--code:#071013;--up:#ed6870;--down:#4cc38a;--down-soft:#16301f;--code-ink:#e8f1ee;--shadow:0 18px 46px rgba(0,0,0,.28)}
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.72}
+    a{color:var(--accent-2);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:var(--accent)}
+    button{font:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
+    .mast{padding:64px 0 30px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--paper),var(--bg))}
+    .mast-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:52px;align-items:end}
+    .edition{font:600 12px/1.2 var(--mono);letter-spacing:.12em;color:var(--accent);margin-bottom:18px}.mast h1{font:900 clamp(38px,6vw,72px)/1.09 var(--serif);letter-spacing:-.045em;margin:0 0 22px;max-width:900px}
+    .dek{font-size:clamp(17px,2vw,22px);color:var(--muted);margin:0;max-width:770px}.scope{border-top:3px solid var(--accent);padding-top:18px}.scope strong{display:block;font:700 13px/1.4 var(--mono);color:var(--ink);margin-bottom:9px}.scope p{margin:0;color:var(--muted);font-size:14px}.date{margin-top:14px;font:500 12px/1.5 var(--mono);color:var(--faint)}
+    .sticky-nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;gap:6px;flex-wrap:wrap;padding:10px 0}.nav-inner a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:700;padding:7px 10px;border-radius:7px}.nav-inner a:hover,.nav-inner a.active{background:var(--paper);color:var(--accent);box-shadow:0 0 0 1px var(--line)}
+    main{padding:34px 0 80px}.section{scroll-margin-top:72px;padding:58px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;margin-bottom:30px;align-items:start}.section-no{font:600 12px/1.2 var(--mono);color:var(--accent);padding-top:12px}.section h2{font:800 clamp(28px,4vw,46px)/1.18 var(--serif);letter-spacing:-.025em;margin:0}.section-intro{margin:14px 0 0;color:var(--muted);font-size:18px;max-width:830px}
+    .key-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.key{background:var(--paper);border:1px solid var(--line);padding:22px;border-radius:var(--radius);min-height:172px}.key .num{font:700 13px var(--mono);color:var(--accent);margin-bottom:24px}.key h3{font:700 18px/1.4 var(--sans);margin:0 0 9px}.key p{margin:0;color:var(--muted);font-size:14px}.key.wide{grid-column:span 2;background:var(--navy);color:var(--bg)}.key.wide p{color:color-mix(in srgb,var(--bg) 80%,transparent)}
+    @media(prefers-color-scheme:dark){.key.wide{background:#d7e3df;color:#122126}.key.wide p{color:#45565a}}
+    .note{margin-top:16px;padding:15px 18px;background:var(--amber-soft);border-radius:9px;color:var(--ink);font-size:14px}.note strong{color:var(--amber)}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:26px 0 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.flow-step{padding:24px 20px;position:relative;border-right:1px solid var(--line)}.flow-step:last-child{border-right:0}.flow-step b{display:block;font-size:17px;margin:8px 0 7px}.flow-step p{margin:0;color:var(--muted);font-size:13px}.flow-step .tag{font:600 11px var(--mono);color:var(--accent-2)}
+    .table-wrap{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:22px}table{border-collapse:collapse;width:100%;font-size:14px}th{text-align:left;padding:14px 16px;background:color-mix(in srgb,var(--paper) 78%,var(--bg));border-bottom:1px solid var(--line-strong);font-size:12px;letter-spacing:.04em;color:var(--muted)}td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:0}td strong{color:var(--ink)}.muted{color:var(--muted)}.mono{font-family:var(--mono);font-size:.92em}.pill{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;background:var(--teal-soft);color:var(--accent-2);font-size:11px;font-weight:700;white-space:nowrap}.pill.red{background:var(--accent-soft);color:var(--accent)}.pill.amber{background:var(--amber-soft);color:var(--amber)}
+    .subhead{font:800 24px/1.3 var(--serif);margin:40px 0 16px}.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.panel h3{margin:0 0 12px;font:700 20px/1.35 var(--sans)}.panel p{margin:0;color:var(--muted)}
+    .spec-list{list-style:none;margin:16px 0 0;padding:0}.spec-list li{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:14px}.spec-list b{font-size:13px;color:var(--accent-2)}
+    .factor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.factor{padding:19px 18px;background:var(--paper);border-top:3px solid var(--line-strong);box-shadow:0 0 0 1px var(--line);border-radius:2px 2px 10px 10px}.factor[data-kind="price"]{border-top-color:var(--accent)}.factor[data-kind="risk"]{border-top-color:var(--accent-2)}.factor[data-kind="liq"]{border-top-color:var(--amber)}.factor h3{font-size:16px;margin:0 0 7px}.formula{font:500 12px/1.55 var(--mono);color:var(--muted);word-break:break-word}.factor p{font-size:13px;margin:8px 0 0;color:var(--muted)}
+    .pipeline{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;margin:22px 0}.pipe{flex:1 1 125px;min-width:120px;background:var(--paper);border:1px solid var(--line);padding:14px;border-radius:9px;text-align:center;font-size:13px;font-weight:700;position:relative}.pipe:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);z-index:1;color:var(--accent)}
+    .matrix{display:grid;grid-template-columns:180px repeat(3,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper)}.matrix>div{padding:15px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px}.matrix>div:nth-child(4n){border-right:0}.matrix>div:nth-last-child(-n+4){border-bottom:0}.matrix .mh{background:color-mix(in srgb,var(--paper) 78%,var(--bg));font-weight:800;color:var(--ink)}.matrix .rowh{font-weight:700}.matrix .good{color:var(--accent-2)}.matrix .warn{color:var(--amber)}
+    .rule-banner{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;background:var(--code);color:var(--code-ink);border-radius:var(--radius);overflow:hidden;margin:24px 0}.rule{padding:22px;border-right:1px solid rgba(255,255,255,.15)}.rule:last-child{border-right:0}.rule .big{font:700 30px/1 var(--mono);color:#ff9096}.rule small{display:block;margin-top:9px;color:#b8c7c4}.rule .when{font-size:11px;color:#7fa7a3;margin-top:6px}
+    .match-code{background:var(--code);color:var(--code-ink);border-radius:var(--radius);padding:22px 24px;margin:18px 0;overflow:auto;font:500 12.5px/1.85 var(--mono);white-space:pre-wrap}.match-code .c{color:#8aa7a3}.match-code .r{color:#ff8d94}.match-code .t{color:#65d0c7}
+    .trap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.trap{background:var(--paper);border:1px solid var(--line);padding:17px;border-radius:10px}.trap b{display:block;font-size:14px;margin-bottom:6px}.trap span{font-size:12px;color:var(--muted)}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.tabs button{border:1px solid var(--line);background:var(--paper);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700}.tabs button.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}.framework-row[hidden]{display:none}.stars{font-family:var(--mono);white-space:nowrap}.license{font-size:11px}.pick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.pick{background:var(--paper);border:1px solid var(--line);padding:19px;border-radius:11px}.pick .for{font:600 11px var(--mono);color:var(--accent);margin-bottom:10px}.pick b{font-size:18px}.pick p{font-size:13px;color:var(--muted);margin:8px 0 0}
+    .timeline{position:relative;margin:26px 0 0}.timeline::before{content:"";position:absolute;left:18px;top:7px;bottom:8px;width:2px;background:var(--line)}.event{position:relative;padding-left:54px;margin:0 0 24px}.event::before{content:"";position:absolute;left:11px;top:7px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--accent)}.event time{font:600 12px var(--mono);color:var(--accent)}.event h3{margin:3px 0 4px;font-size:17px}.event p{margin:0;color:var(--muted);font-size:14px}
+    .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tier{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.tier-head{padding:20px;border-bottom:1px solid var(--line)}.tier-head span{font:600 11px var(--mono);color:var(--accent)}.tier-head h3{margin:5px 0 0;font-size:21px}.tier ul{margin:0;padding:10px 20px 20px 38px}.tier li{padding:7px 0;color:var(--muted);font-size:14px}.tier.featured{box-shadow:var(--shadow);border-color:var(--accent-2)}
+    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:0 24px;list-style:none;padding:0;margin:22px 0}.checklist li{position:relative;padding:12px 0 12px 28px;border-bottom:1px solid var(--line);font-size:14px}.checklist li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:10px;background:var(--accent-2);transform:rotate(45deg)}
+    .sources{font-size:13px}.sources ol{columns:2;column-gap:42px;padding-left:24px}.sources li{break-inside:avoid;padding:5px 0;color:var(--muted)}.sources a{word-break:break-all}.source-ref{font:600 10px var(--mono);vertical-align:super;text-decoration:none;margin-left:2px}
+    .caveats{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.caveats h3{margin:0 0 12px;font-size:18px}.caveats ul{margin:0;padding-left:20px;color:var(--muted);font-size:14px}.caveats li{padding:4px 0}
+    footer{padding:28px 0 50px;color:var(--faint);font-size:12px}.footer-line{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:20px}
+    @media(max-width:900px){.mast-grid{grid-template-columns:1fr;gap:28px}.section-head{grid-template-columns:1fr;gap:4px}.section-no{padding-top:0}.key-grid,.factor-grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:1fr 1fr}.flow-step:nth-child(2){border-right:0}.flow-step:nth-child(-n+2){border-bottom:1px solid var(--line)}.rule-banner{grid-template-columns:1fr 1fr}.rule:nth-child(2){border-right:0}.rule:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.15)}.trap-grid,.pick-grid{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:1fr}.matrix{grid-template-columns:140px repeat(3,1fr)}}
+    @media(max-width:680px){.wrap{width:min(100% - 24px,1180px)}.mast{padding:38px 0 22px}.mast h1{font-size:40px}.sticky-nav{position:relative}.nav-inner{gap:3px}.nav-inner a{font-size:12px;padding:6px 8px}.section{padding:42px 0}.key-grid,.factor-grid,.cols-2,.trap-grid,.pick-grid,.checklist{grid-template-columns:1fr}.key.wide{grid-column:span 1}.flow{grid-template-columns:1fr}.flow-step{border-right:0;border-bottom:1px solid var(--line)}.flow-step:last-child{border-bottom:0}.pipe:not(:last-child)::after{display:none}.rule-banner{grid-template-columns:1fr 1fr}.rule{padding:17px}.rule .big{font-size:24px}.matrix{display:block;border:0;background:none}.matrix .mh{display:none}.matrix>div{border:1px solid var(--line);border-bottom:0;background:var(--paper);padding:12px}.matrix .rowh{margin-top:12px;border-radius:9px 9px 0 0;background:var(--ink);color:var(--bg)}.matrix .rowh~div{padding-left:18px}.matrix>div:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.matrix>div:nth-child(4n){border-right:1px solid var(--line)}.matrix>div:not(.rowh):not(.mh)::before{font:600 10px var(--mono);color:var(--faint);margin-right:8px}.matrix>div:nth-child(4n+2)::before{content:"有效性"}.matrix>div:nth-child(4n+3)::before{content:"主要限制"}.matrix>div:nth-child(4n+4)::before{content:"定位"}
+      table.responsive thead{display:none}table.responsive,table.responsive tbody,table.responsive tr,table.responsive td{display:block;width:100%}table.responsive tr{padding:12px 14px;border-bottom:1px solid var(--line)}table.responsive tr:last-child{border-bottom:0}table.responsive td{padding:5px 0;border:0}table.responsive td::before{content:attr(data-label);display:block;font:600 10px var(--mono);color:var(--faint);margin-bottom:2px}.sources ol{columns:1}.footer-line{display:block}.footer-line span{display:block;margin-top:6px}}
+
+/* ===== md2html 市场报告组件（沿用 template_v2 设计语言） ===== */
+/* 红涨绿跌（A股习惯） */
+.up{color:var(--up);font-weight:700;font-variant-numeric:tabular-nums}
+.dn{color:var(--down);font-weight:700;font-variant-numeric:tabular-nums}
+/* 正文排版 */
+.section>p,.section>ul,.section>ol{max-width:900px}
+.section>p{margin:12px 0}
+.section ul,.section ol{padding-left:22px}
+.section li{margin:6px 0}
+.section li::marker{color:var(--line-strong)}
+.section ul ul{margin:4px 0 6px;padding-left:18px}
+.section ul ul{list-style:none;padding-left:0}
+.section ul ul li{color:var(--muted);font-size:14.5px}
+.section em{font-style:normal;font:600 11px/1 var(--mono);letter-spacing:.06em;color:var(--amber);background:var(--amber-soft);padding:3px 6px;border-radius:4px;margin-right:4px}
+/* 以加粗关键词开头的列表项：左侧关键词栏（参照 spec-list） */
+.section ul.kl{list-style:none;padding-left:0;margin:10px 0 18px}
+.section ul.kl>li{position:relative;padding:11px 0 11px 168px;margin:0;border-top:1px solid var(--line);min-height:20px}
+.section ul.kl>li:last-child{border-bottom:1px solid var(--line)}
+.section ul.kl>li>strong:first-child{position:absolute;left:0;top:11px;width:152px;font-size:13.5px;line-height:1.6;color:var(--accent-2)}
+/* h3 = subhead（模板原样），h4 = 小标题 */
+.section h4{display:flex;align-items:center;gap:10px;font:700 17px/1.4 var(--sans);margin:30px 0 10px;color:var(--ink)}
+.section h4::before{content:"";width:9px;height:9px;background:var(--accent);transform:rotate(45deg);flex:none}
+.subhead .kick{display:block;font:600 11px/1.2 var(--mono);letter-spacing:.12em;color:var(--accent-2);margin-bottom:6px}
+/* 表格增强 */
+.table-wrap{overflow-x:auto}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.num{font-size:13.5px}
+.table-wrap.narrow{display:inline-block;min-width:min(100%,560px);max-width:100%;vertical-align:top;margin-right:12px;overflow-x:auto}
+.table-wrap+p.srcline{margin-top:8px}
+p.srcline{font:500 11.5px/1.6 var(--mono);color:var(--faint);margin:8px 0 0}
+p.srcline a{color:var(--faint)}
+/* 指数卡片（rule-banner 风格） */
+.rule-banner.cards{grid-template-columns:repeat(var(--n,4),1fr);margin:0 0 6px}
+.rule-banner.cards .rule{border-right:1px solid rgba(255,255,255,.15)}
+.rule-banner.cards .rule:last-child{border-right:0}
+.rule-banner.cards .big{color:var(--code-ink);font-size:clamp(20px,2.2vw,28px)}
+.rule-banner.cards .when{font:700 13px/1.3 var(--mono);margin-top:10px;color:#9fb6b2}
+.rule-banner.cards .rule.up .when{color:#ff8d94}.rule-banner.cards .rule.dn .when{color:#6fdc9a}
+.rule-banner.cards .rule.up{box-shadow:inset 0 3px 0 #ff8d94}.rule-banner.cards .rule.dn{box-shadow:inset 0 3px 0 #6fdc9a}
+/* 核心观点 key-grid：.key 里的标题沿用模板 */
+.key h3 .up,.key h3 .dn,.key p .up,.key p .dn{font-weight:700}
+.key-grid .key.full{grid-column:1/-1}
+.key.wide h3{font:800 clamp(20px,2.2vw,26px)/1.45 var(--serif);letter-spacing:-.01em}
+/* 提示 / 风险框 */
+.caveats{margin:22px 0}
+.caveats.risk{border-top:3px solid var(--accent)}
+.caveats.risk h3{color:var(--accent)}
+.caveats.tip{border-top:3px solid var(--accent-2)}
+.caveats.tip h3{color:var(--accent-2)}
+.caveats ul.kl{margin:0}.caveats ul.kl>li{padding-left:150px}.caveats ul.kl>li>strong:first-child{width:136px;color:var(--ink)}
+.caveats ul.kl>li:last-child{border-bottom:0}
+.caveats p{margin:6px 0;color:var(--muted);font-size:14px}
+.note p{margin:4px 0}
+.section-intro .up,.section-intro .dn{font-weight:700}
+/* 代码 */
+code{font-family:var(--mono);font-size:.88em;background:var(--teal-soft);color:var(--accent-2);padding:1px 5px;border-radius:4px}
+pre.match-code code{background:none;color:inherit;padding:0;font-size:inherit}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.mast h1 .sub{display:block;font-size:.5em;letter-spacing:-.02em;color:var(--muted);margin-top:8px;font-weight:700}
+@media(max-width:900px){.rule-banner.cards{grid-template-columns:repeat(3,1fr)}.rule-banner.cards .rule{border-bottom:1px solid rgba(255,255,255,.15)}.rule-banner.cards .rule:nth-child(3n){border-right:0}}
+@media(max-width:680px){
+ .rule-banner.cards{grid-template-columns:1fr 1fr}.rule-banner.cards .rule:nth-child(3n){border-right:1px solid rgba(255,255,255,.15)}.rule-banner.cards .rule:nth-child(2n){border-right:0}
+ .section ul.kl>li,.caveats ul.kl>li{padding-left:0}
+ .section ul.kl>li>strong:first-child,.caveats ul.kl>li>strong:first-child{position:static;display:block;width:auto}
+ .table-wrap.narrow{display:block;margin-right:0;min-width:0}
+ .key.wide h3{font-size:19px}
+}
+@media print{.sticky-nav{display:none}.section{break-inside:auto}.rule-banner,.key,.table-wrap{break-inside:avoid}}
+@media(max-width:680px){
+ table:not(.responsive) td,table:not(.responsive) th{padding:10px 10px}
+ table:not(.responsive) td:first-child{white-space:nowrap}
+ .table-wrap:not(.narrow) table:not(.responsive){min-width:540px}
+}
+
+/* 图片（md2html 扩展：![图注](本地路径) 单独成段 -> figure，本地文件内联） */
+figure.fig{margin:22px 0;max-width:980px}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+figure.fig figcaption{font:500 12px/1.6 var(--mono);color:var(--faint);margin-top:8px}
+
+
 </style>
 </head>
 <body>
-<header class="mast"><div class="wrap">
-<div class="edition">WEEKEND EDITION · 2026-11-01 周日</div>
-<h1>三地市场周末版 10月26日至30日这一周</h1>
-<p class="dek">这一周的定价标准变了：市场不再只看云收入增速，而是盯着科技巨头的资本开支和自由现金流。杀估值从美股财报季传到亚太成长股，A股资金抱团银行与红利，港股恒指守住周涨，但南向创下五年多最大单月流出。</p>
-<div class="back"><a href="../index.html">← 全部报告</a></div>
+<header class="mast"><div class="wrap mast-grid">
+<div><div class="edition">WEEKEND EDITION · 2026.11.01</div><h1>三地市场周末版<span class="sub">10月26日至30日这一周</span></h1><p class="dek">这一周的定价标准变了：市场不再只看云收入增速，而是盯着科技巨头的资本开支和自由现金流。杀估值从美股财报季传到亚太成长股，A股资金抱团银行与红利；港股恒指靠内银与石油守住周涨，但南向创下五年多最大单月流出。下周中选、非农与苹果财报，将决定这轮重定价是延续还是缓和。</p></div>
+<aside class="scope"><strong>本期范围</strong><p>一周行情回顾（A股、港股、美股、大类资产）+ 周末要事（10 月 30 日收盘到 11 月 1 日）+ 下周展望。只写能找到可靠来源的内容，没核实到的会注明。周涨跌幅都和 10 月 23 日（上周五）收盘比。</p><div class="date">生成时间：2026-11-01 21:40（北京时间）· 第二版（版式对齐 stocks）</div></aside>
 </div></header>
+<nav class="sticky-nav" aria-label="报告目录"><div class="wrap nav-inner"><a href="#summary">本期核心观点</a><a href="#review">一周行情回顾</a><a href="#weekend">周末要事</a><a href="#nextweek">下周展望</a><a href="#checklist">下周验证清单</a></div></nav>
 <main class="wrap">
-
 <div class="rule-banner cards" style="--n:6" aria-label="核心指标"><div class="rule dn"><div class="big">3599.02</div><small>上证指数</small><div class="when">周跌 2.48%</div></div><div class="rule dn"><div class="big">2413.63</div><small>创业板指</small><div class="when">周跌 10.08%</div></div><div class="rule up"><div class="big">23294.42</div><small>恒生指数</small><div class="when">周涨 0.87%</div></div><div class="rule dn"><div class="big">7580.07</div><small>标普500</small><div class="when">周跌 0.57%</div></div><div class="rule dn"><div class="big">25437.00</div><small>纳斯达克</small><div class="when">周跌 2.00%</div></div><div class="rule up"><div class="big">117.64</div><small>布伦特原油</small><div class="when">周涨 0.79%</div></div></div>
 
-<section class="section" id="takeaways">
-<div class="kicker">00 / KEY TAKEAWAYS</div>
-<h2>本期核心观点</h2>
-<div class="keyview">主线是「AI 烧钱焦虑」：Alphabet、亚马逊、英特尔的财报先后触发抛售，纳指一周跌 2.00%，A股创业板、科创50 周跌一成上下，主力资金一周净流出 1264.80 亿元。港股靠内银与石油逆势收涨，但南向资金 10 月净卖出约 280 亿港元。下周美国中期选举（11月3日）、非农（11月6日）与苹果财报（周一盘后）将决定这轮重定价是延续还是缓和。</div>
-<div class="takeaways">
-<div class="card"><div class="n">01</div><h3>A股：成长杀估值，红利护盘</h3><p>沪指周跌 2.48% 失守 3600，创业板指跌 10.08%，科创50 跌 13.72%；申万银行周涨 4.97%、通信周跌 14.77%，风格切换极端。</p></div>
-<div class="card"><div class="n">02</div><h3>港股：恒指涨、恒科跌</h3><p>恒指周涨 0.87%，恒生科技跌 3.02%；南向本周约净卖出 110 亿港元，10 月累计约 280 亿港元，为 2021 年 8 月以来最大单月流出（Wind 口径）。</p></div>
-<div class="card"><div class="n">03</div><h3>美股：科技砸、广度胜</h3><p>标普周跌 0.57%、纳指跌 2.00%，但等权标普约涨 0.8%、11 个板块 9 个上涨；英特尔周五跌约 29%，Alphabet 周四跌 12.6%。</p></div>
-<div class="card"><div class="n">04</div><h3>周末与下周</h3><p>10 月制造业 PMI 回落至 49.3%，五中全会敲定二十一大 2027 年下半年召开；下周中选、非农与苹果财报三件大事接连落地，美股转入冬令时。</p></div>
+<section class="section" id="summary"><div class="section-head"><div class="section-no">00 / KEY TAKEAWAYS</div><div><h2>本期核心观点</h2></div></div>
+<div class="key-grid">
+<article class="key wide"><div class="num">KEY VIEW</div><h3>主线是「AI 烧钱焦虑」：巨头财报开始按自由现金流打分，杀估值从美股传到亚太成长股</h3><p>Alphabet、亚马逊、英特尔先后触发抛售，纳指一周跌 2.00%；A股创业板、科创50 周跌一成上下，主力资金一周净流出 1264.80 亿元，资金切向银行、石油石化与食品饮料。港股恒指逆势周涨，但南向 10 月净卖出约 280 亿港元、创 2021 年 8 月以来最大单月流出。这不是系统性恐慌——美股等权标普同周上涨、11 个板块 9 个收涨——而是高估值 AI 链的一次集中重定价。</p></article>
+<article class="key"><div class="num">01</div><h3>A股：成长杀估值，红利护盘</h3><p>沪指周<span class="dn">跌 2.48%</span>失守 3600，创业板指<span class="dn">跌 10.08%</span>，科创50 <span class="dn">跌 13.72%</span>；银行周<span class="up">涨 4.97%</span>、通信周<span class="dn">跌 14.77%</span>，风格切换极端。</p></article>
+<article class="key"><div class="num">02</div><h3>港股：恒指涨、恒科跌</h3><p>恒指周<span class="up">涨 0.87%</span>，恒生科技<span class="dn">跌 3.02%</span>；南向本周约净卖出 110 亿港元，已连续 13 个交易日流出，内银与石油是对冲主力。</p></article>
+<article class="key"><div class="num">03</div><h3>美股：科技砸、广度胜</h3><p>标普周<span class="dn">跌 0.57%</span>、纳指<span class="dn">跌 2.00%</span>，但等权标普约<span class="up">涨 0.8%</span>、罗素 2000 <span class="up">涨 1.29%</span>；英特尔周五<span class="dn">跌约 29%</span>，Alphabet 周四<span class="dn">跌 12.6%</span>。</p></article>
+<article class="key"><div class="num">04</div><h3>周末与下周</h3><p>10 月制造业 PMI 回落至 49.3%，五中全会敲定二十一大 2027 年下半年召开；下周 11 月 3 日美国中期选举、11 月 6 日非农，苹果周一盘后财报打头阵，美股转入冬令时。</p></article>
 </div>
 </section>
 
-<section class="section" id="review">
-<div class="kicker">01 / WEEKLY REVIEW</div>
-<h2>一周行情回顾</h2>
+<section class="section" id="review"><div class="section-head"><div class="section-no">01 / WEEKLY REVIEW</div><div><h2>一周行情回顾</h2></div></div>
 
-<h3>A股：周三反抽未能延续，周四周五连续杀跌</h3>
-<table>
+<h3 class="subhead"><span class="kick">A-SHARE</span>A股：周三反抽未能延续，周四周五连续杀跌</h3>
+<p>这一周 A股先稳后杀：周一周二白酒医药与银行护盘、成长走弱，周三放量反抽一天，周四起被海外科技财报连环冲击，创业板连续两日跌超 4%。沪指失守 3600 点，成长风格的压力远大于权重。</p>
+<h4>指数表现</h4>
+<div class="table-wrap"><table>
 <tr><th>指数</th><th>周五收盘</th><th>周涨跌</th><th>备注</th></tr>
-<tr><td><strong>上证指数</strong></td><td>3599.02</td><td class="down">-2.48%</td><td>周五跌 1.44%，失守 3600 点</td></tr>
-<tr><td><strong>深证成指</strong></td><td>10833.78</td><td class="down">-7.20%</td><td>周五跌 2.73%</td></tr>
-<tr><td><strong>创业板指</strong></td><td>2413.63</td><td class="down">-10.08%</td><td>周四、周五分别跌 4.45%、4.13%</td></tr>
-<tr><td><strong>沪深300</strong></td><td>3985.50</td><td class="down">-2.92%</td><td>周五跌 1.39%，为主要指数中最小</td></tr>
-<tr><td><strong>科创50</strong></td><td>1160.84</td><td class="down">-13.72%</td><td>周五跌 5.48%，收盘为 2025 年 8 月以来最低</td></tr>
-</table>
-<p class="src">来源：证券时报·数据宝周报（东方财富转载）、同花顺每日复盘、新华财经。</p>
-<table>
+<tr><td><strong>上证指数</strong></td><td class="num">3599.02</td><td><span class="dn">-2.48%</span></td><td>周五跌 1.44%，失守 3600 点</td></tr>
+<tr><td><strong>深证成指</strong></td><td class="num">10833.78</td><td><span class="dn">-7.20%</span></td><td>周五跌 2.73%</td></tr>
+<tr><td><strong>创业板指</strong></td><td class="num">2413.63</td><td><span class="dn">-10.08%</span></td><td>周四、周五分别跌 4.45%、4.13%</td></tr>
+<tr><td><strong>沪深300</strong></td><td class="num">3985.50</td><td><span class="dn">-2.92%</span></td><td>周五跌 1.39%，主要指数中跌幅最小</td></tr>
+<tr><td><strong>科创50</strong></td><td class="num">1160.84</td><td><span class="dn">-13.72%</span></td><td>周五跌 5.48%，收盘为 2025 年 8 月以来最低</td></tr>
+</table></div>
+<p class="srcline">来源：证券时报·数据宝周报、同花顺每日复盘、新华财经。</p>
+<h4>每日走势</h4>
+<div class="table-wrap"><table>
 <tr><th>日期</th><th>上证指数</th><th>创业板指</th><th>沪深成交额</th><th>主力资金（数据宝）</th></tr>
-<tr><td>10月26日 周一</td><td class="up">+0.19%</td><td class="down">-1.71%</td><td>约 1.61 万亿元</td><td>—</td></tr>
-<tr><td>10月27日 周二</td><td class="down">-1.33%</td><td class="down">-3.41%</td><td>约 1.46 万亿元</td><td>—</td></tr>
-<tr><td>10月28日 周三</td><td class="up">+0.91%</td><td class="up">+3.40%</td><td>约 1.63 万亿元</td><td>净流入（东财口径约 148 亿元）</td></tr>
-<tr><td>10月29日 周四</td><td class="down">-0.82%</td><td class="down">-4.45%</td><td>约 1.56 万亿元</td><td class="down">净流出 602.14 亿元</td></tr>
-<tr><td>10月30日 周五</td><td class="down">-1.44%</td><td class="down">-4.13%</td><td>约 1.67 万亿元</td><td class="down">净流出 314.33 亿元</td></tr>
-</table>
-<ul>
-<li><strong>资金面：</strong>全周主力资金净流出 <strong>1264.80 亿元</strong>，其中创业板净流出 375.83 亿元、科创板 204.66 亿元、沪深300 成份股 428.38 亿元；只有周三净流入，其余四日流出。全周上涨个股仅 816 只、占比 14.64%，下跌 4736 只；五日成交合计约 7.93 万亿元。（数据宝）</li>
-<li><strong>行业：</strong>申万一级行业 6 个上涨——银行 +4.97%、石油石化 +3.50%、食品饮料 +3.29%、煤炭 +2.97%、交通运输 +2.44%；跌幅居前为通信 -14.77%、电子 -13.82%、计算机 -10.85%。行业资金上，食品饮料净流入 23.69 亿元居首，电子净流出 471.15 亿元居首。（数据宝）</li>
-<li><strong>风格：</strong>建行、工行、中行、中信银行周内创历史新高，中国石油创约 18 年新高；与之相对，算力硬件是 10 月跌幅最深的方向之一。整个 10 月双创指数累跌超 23%，创业板指较 6 月历史高点回落超 44%。（新华财经）</li>
+<tr><td>10月26日 周一</td><td><span class="up">+0.19%</span></td><td><span class="dn">-1.71%</span></td><td>约 1.61 万亿元</td><td><span class="dn">净流出 219.25 亿元</span></td></tr>
+<tr><td>10月27日 周二</td><td><span class="dn">-1.33%</span></td><td><span class="dn">-3.41%</span></td><td>约 1.46 万亿元</td><td><span class="dn">净流出 372.42 亿元</span></td></tr>
+<tr><td>10月28日 周三</td><td><span class="up">+0.91%</span></td><td><span class="up">+3.40%</span></td><td>约 1.63 万亿元</td><td><span class="up">净流入 243.34 亿元</span></td></tr>
+<tr><td>10月29日 周四</td><td><span class="dn">-0.82%</span></td><td><span class="dn">-4.45%</span></td><td>约 1.56 万亿元</td><td><span class="dn">净流出 602.14 亿元</span></td></tr>
+<tr><td>10月30日 周五</td><td><span class="dn">-1.44%</span></td><td><span class="dn">-4.13%</span></td><td>约 1.67 万亿元</td><td><span class="dn">净流出 314.33 亿元</span></td></tr>
+</table></div>
+<p class="srcline">来源：数据宝每日主力资金表；成交额为约数，五日合计约 7.93 万亿元。</p>
+<ul class="kl">
+<li><strong>资金面</strong>全周主力资金净流出 <strong>1264.80 亿元</strong>，其中创业板净流出 375.83 亿元、科创板 204.66 亿元、沪深300 成份股 428.38 亿元；只有周三净流入，其余四日流出，周四单日流出 602.14 亿元。全周上涨个股仅 816 只、占比 14.64%，下跌 4736 只。（数据宝）</li>
+<li><strong>行业</strong>申万一级行业 6 个上涨——银行 +4.97%、石油石化 +3.50%、食品饮料 +3.29%、煤炭 +2.97%、交通运输 +2.44%；跌幅居前为通信 -14.77%、电子 -13.82%、计算机 -10.85%、建筑材料 -8.79%。行业资金上，食品饮料净流入 23.69 亿元居首，电子净流出 471.15 亿元居首，通信、计算机分别净流出 136.58 亿、131.15 亿元。（数据宝）</li>
+<li><strong>个股资金</strong>中际旭创本周股价跌 9.73%，主力资金却净流入 21.42 亿元居首，显示资金在光模块龙头上抄底与兑现并存；金安国纪、工商银行分别净流入 10.48 亿、9.38 亿元。净流出居前为天孚通信 21.90 亿元、源杰科技 19.69 亿元、亨通光电 18.11 亿元——全是算力硬件链。（数据宝）</li>
+<li><strong>风格与情绪</strong>建行、工行、中行、中信银行周内创历史新高，中国石油创约 18 年新高，中国神华续创近 19 年新高；另一端，整个 10 月双创指数累跌超 23%，创业板指较今年 6 月历史高点回落超 44%，算力硬件是月内跌幅最深的方向。周五成交放大到 1.67 万亿元却继续下跌，说明放量不等于风险偏好回暖。（新华财经、金融界）</li>
 </ul>
 
-<h3>港股：恒指周涨 0.87%，南向继续净卖出</h3>
-<table>
+<h3 class="subhead"><span class="kick">HONG KONG</span>港股：恒指周涨 0.87%，南向连续 13 日净卖出</h3>
+<p>港股与 A股同周不同命：恒指靠内银、石油与消费守住周涨，恒生科技跟随全球硬件链走弱。真正的压力在资金端——南向已经连续 13 个交易日净卖出。</p>
+<h4>指数表现</h4>
+<div class="table-wrap"><table>
 <tr><th>指数</th><th>周五收盘</th><th>周涨跌</th><th>备注</th></tr>
-<tr><td><strong>恒生指数</strong></td><td>23294.42</td><td class="up">+0.87%</td><td>周五涨 1.46%，主板成交 2143.18 亿港元</td></tr>
-<tr><td><strong>恒生科技指数</strong></td><td>3754.90</td><td class="down">-3.02%</td><td>周五仅涨 0.29%，明显弱于恒指</td></tr>
-<tr><td><strong>国企指数</strong></td><td>7862.22</td><td class="up">+1.37%</td><td>内银与石油支撑</td></tr>
-</table>
-<p class="src">来源：华盛通/TradingKey 港股周报、东方财富港股收评、新华网。</p>
-<ul>
-<li><strong>南向资金：</strong>本周五个交易日全部净卖出，按每日数据加总约 <strong>110 亿港元</strong>（周五单日 35.60 亿港元，为连续第 13 个交易日净卖出）；10 月累计净卖出约 <strong>279.51 亿港元</strong>，较 9 月净买入 607.76 亿港元大幅逆转，创 2021 年 8 月以来最大单月流出（Wind 口径）。近一月南向大幅净卖出中芯国际约 94.54 亿港元、阿里巴巴约 51 亿港元，净买入腾讯约 59 亿港元。</li>
-<li><strong>板块与个股（周五）：</strong>石油股走强，上海石化 +10.31%、中石化 +6.22%、中石油 +5.66%；消费股蒙牛、农夫山泉涨幅居前；半导体承压，中芯国际 -4.40%、联想跌超 7%。</li>
-<li><strong>机构观点：</strong>瑞银称 AI 硬件股估值已接近低位（周报转述，属机构观点，需继续跟踪验证）。</li>
+<tr><td><strong>恒生指数</strong></td><td class="num">23294.42</td><td><span class="up">+0.87%</span></td><td>周五涨 1.46%，主板成交 2143.18 亿港元</td></tr>
+<tr><td><strong>恒生科技指数</strong></td><td class="num">3754.90</td><td><span class="dn">-3.02%</span></td><td>周五仅涨 0.29%，明显弱于恒指</td></tr>
+<tr><td><strong>国企指数</strong></td><td class="num">7862.22</td><td><span class="up">+1.37%</span></td><td>内银与石油支撑</td></tr>
+</table></div>
+<p class="srcline">来源：华盛通/TradingKey 港股周报、东方财富港股收评、新华网。</p>
+<h4>每日走势与南向</h4>
+<div class="table-wrap"><table>
+<tr><th>日期</th><th>恒生指数</th><th>恒生科技</th><th>南向资金</th></tr>
+<tr><td>10月26日 周一</td><td><span class="up">+0.51%</span>（23211.81）</td><td><span class="dn">-0.36%</span>（3857.53）</td><td><span class="dn">净卖出 20.75 亿港元</span></td></tr>
+<tr><td>10月27日 周二</td><td><span class="dn">-0.73%</span>（23041.32）</td><td><span class="dn">-1.48%</span></td><td><span class="dn">净卖出约 12.38 亿港元</span></td></tr>
+<tr><td>10月28日 周三</td><td><span class="up">+0.23%</span>（23094.83）</td><td><span class="up">+1.40%</span>（3853.72）</td><td><span class="dn">净卖出 8.04 亿港元</span></td></tr>
+<tr><td>10月29日 周四</td><td><span class="dn">-0.59%</span>（22958.65）</td><td><span class="dn">-2.84%</span>（3744.14）</td><td><span class="dn">净卖出 33.59 亿港元</span></td></tr>
+<tr><td>10月30日 周五</td><td><span class="up">+1.46%</span>（23294.42）</td><td><span class="up">+0.29%</span>（3754.90）</td><td><span class="dn">净卖出 35.60 亿港元</span></td></tr>
+</table></div>
+<ul class="kl">
+<li><strong>资金面</strong>本周南向五个交易日全部净卖出，按每日数据加总约 <strong>110 亿港元</strong>；10 月累计净卖出约 <strong>279.51 亿港元</strong>，较 9 月净买入 607.76 亿港元大幅逆转，创 2021 年 8 月以来最大单月流出（Wind 口径）。近一月南向大幅净卖出中芯国际约 94.54 亿港元、阿里巴巴约 51 亿港元，同时净买入腾讯约 59 亿港元——是结构调仓，不是不计成本离场。</li>
+<li><strong>板块与个股</strong>周五石油股走强：上海石化 +10.31%、中石化 +6.22%、中石油 +5.66%；消费股蒙牛、农夫山泉涨幅居前；半导体承压，中芯国际 -4.40%、联想跌超 7%。全周看，多家银行股创新高，工行周涨约 9%（周报口径）。</li>
+<li><strong>机构观点</strong>瑞银称 AI 硬件股估值已接近低位（周报转述，属机构观点，需继续跟踪验证）。</li>
 </ul>
 
-<h3>美股：财报按「现金流」打分，等权指数逆势上涨</h3>
-<table>
+<h3 class="subhead"><span class="kick">US</span>美股：财报按「现金流」打分，等权指数逆势上涨</h3>
+<p>美股这一周前三天还在涨：Anthropic 公开提交 IPO 文件点燃 AI 情绪，美联储按兵不动。周四 Alphabet 财报引爆「烧钱」焦虑，周五英特尔指引再补一刀，纳指录得 6 月以来最差单周收尾。但跌幅高度集中——等权标普与罗素 2000 同周收涨。</p>
+<h4>指数表现</h4>
+<div class="table-wrap"><table>
 <tr><th>指数</th><th>周五收盘</th><th>周涨跌</th><th>备注</th></tr>
-<tr><td><strong>标普 500</strong></td><td>7580.07</td><td class="down">-0.57%</td><td>周五跌 1.82%，为 6 月 5 日以来最差单日；收盘跌破 100 日均线</td></tr>
-<tr><td><strong>纳斯达克综合</strong></td><td>25437.00</td><td class="down">-2.00%</td><td>周五跌 2.86%，收盘为 7 月 31 日以来最低</td></tr>
-<tr><td><strong>道琼斯</strong></td><td>51770.31</td><td class="down">-0.85%</td><td>周五跌 1.09%；10 月全月仍收涨约 1.7%</td></tr>
-<tr><td><strong>标普 500 等权</strong></td><td>—</td><td class="up">约 +0.8%</td><td>11 个板块 9 个周涨，跌幅集中于巨头权重股（周评媒体口径）</td></tr>
-</table>
-<p class="src">来源：CNBC、Sharecast、Invezz 收盘报道与周评；周涨跌由上周五收盘价计算并与周评口径交叉核对。</p>
-<ul>
-<li><strong>Alphabet（周四）：</strong>云收入高增，但单季资本开支约 514 亿美元、自由现金流约 -91 亿美元，股价周四跌约 12.6%，为上市以来最差单日之一。</li>
-<li><strong>微软（相对抗跌）：</strong>Azure 增长约 48%，资本开支相对克制，财报后两日跌幅不足 2%，是巨头中唯一的例外。</li>
-<li><strong>亚马逊（周四盘后）：</strong>三季度 EPS 1.89 美元、营收约 2019 亿美元，均低于预期；过去十二个月自由现金流约 -424 亿美元，维持 2026 年资本开支约 2200 亿美元指引；周五收跌约 1.4%。</li>
-<li><strong>英特尔（周五）：</strong>三季度营收约 165 亿美元略超预期，但四季度指引 150–160 亿美元明显低于市场预期的约 171 亿美元，CFO 称 PC 需求放缓至少延续到明年上半年；周五跌约 29%，AMD、高通、戴尔等芯片与硬件股同日跌超 10%。</li>
-<li><strong>美联储：</strong>10 月 28 日以 10 比 2 维持联邦基金利率 3.75%–4.00% 不变，库克与哈马克主张加息 25 个基点；声明称经济活动强劲、通胀仍高。</li>
-<li><strong>财报季整体并不差：</strong>已披露的约 299 家标普 500 公司中约 82% 盈利超预期（LSEG 口径，转述）。问题不在当期利润，而在开支与指引。</li>
+<tr><td><strong>标普 500</strong></td><td class="num">7580.07</td><td><span class="dn">-0.57%</span></td><td>周五跌 1.82%，为 6 月 5 日以来最差单日；收盘跌破 100 日均线</td></tr>
+<tr><td><strong>纳斯达克综合</strong></td><td class="num">25437.00</td><td><span class="dn">-2.00%</span></td><td>周五跌 2.86%，收盘为 7 月 31 日以来最低</td></tr>
+<tr><td><strong>道琼斯</strong></td><td class="num">51770.31</td><td><span class="dn">-0.85%</span></td><td>周五跌 1.09%；10 月全月仍收涨约 1.7%</td></tr>
+<tr><td><strong>罗素 2000</strong></td><td class="num">2811.84</td><td><span class="up">+1.29%</span></td><td>小盘股逆势收涨，广度并未崩坏</td></tr>
+<tr><td><strong>标普 500 等权</strong></td><td class="num">—</td><td><span class="up">约 +0.8%</span></td><td>11 个板块 9 个周涨，跌幅集中于巨头权重股（周评媒体口径）</td></tr>
+</table></div>
+<p class="srcline">来源：CNBC、Sharecast、Invezz 收盘报道与周评；每日收盘由 Portfolio Terminal、Dean Financials 等交叉核对，周涨跌由上周五收盘价计算。</p>
+<h4>每日走势</h4>
+<div class="table-wrap"><table>
+<tr><th>日期</th><th>标普500</th><th>纳斯达克</th><th>道琼斯</th><th>当天主线</th></tr>
+<tr><td>10月26日 周一</td><td><span class="up">+0.70%</span></td><td><span class="up">+0.82%</span></td><td><span class="up">+0.28%</span></td><td>Anthropic 公开提交 IPO 文件，AI 股反弹、油价回落</td></tr>
+<tr><td>10月27日 周二</td><td><span class="up">+0.60%</span></td><td><span class="up">+1.18%</span></td><td><span class="up">+0.03%</span></td><td>芯片股尾盘急拉领涨；波音等个股财报分化</td></tr>
+<tr><td>10月28日 周三</td><td><span class="up">+0.28%</span></td><td><span class="up">+0.27%</span></td><td><span class="up">+0.19%</span></td><td>美联储维持利率不变；会后巨头财报开始分化</td></tr>
+<tr><td>10月29日 周四</td><td><span class="dn">-0.30%</span></td><td><span class="dn">-1.38%</span></td><td><span class="dn">-0.25%</span></td><td>Alphabet 财报后跌约 12.6%，「烧钱」焦虑引爆</td></tr>
+<tr><td>10月30日 周五</td><td><span class="dn">-1.82%</span></td><td><span class="dn">-2.86%</span></td><td><span class="dn">-1.09%</span></td><td>英特尔跌约 29%，芯片与硬件链集体重挫</td></tr>
+</table></div>
+<ul class="kl">
+<li><strong>Alphabet（周四）</strong>云收入高增，但单季资本开支约 514 亿美元、自由现金流约 -91 亿美元，股价跌约 12.6%，为上市以来最差单日之一——市场开始按现金消耗速度给 AI 投入打分。</li>
+<li><strong>微软（相对抗跌）</strong>Azure 增长约 48%，资本开支相对克制，财报后两日跌幅不足 2%，是巨头中唯一的例外，反证了本轮抛售的筛选标准。</li>
+<li><strong>亚马逊（周四盘后）</strong>三季度 EPS 1.89 美元、营收约 2019 亿美元，均低于预期；过去十二个月自由现金流约 -424 亿美元，维持 2026 年资本开支约 2200 亿美元指引；周五收跌约 1.4%。</li>
+<li><strong>英特尔（周五）</strong>三季度营收约 165 亿美元略超预期，但四季度指引 150–160 亿美元明显低于市场预期的约 171 亿美元，CFO 称 PC 需求放缓至少延续到明年上半年；周五跌约 29%，AMD、高通、戴尔等芯片与硬件股同日跌超 10%，费城半导体指数大幅下挫（单日跌幅口径不一，未写死）。</li>
+<li><strong>宏观与美联储</strong>10 月 28 日美联储以 10 比 2 维持联邦基金利率 3.75%–4.00% 不变，库克与哈马克主张加息 25 个基点——年内最大票数分歧；声明称经济活动强劲、通胀仍高。10 年期美债收益率周中一度升至约 5.05%，周五随股市下跌回落到约 4.93%。财报季整体并不差：已披露的约 299 家标普 500 公司中约 82% 盈利超预期（LSEG 口径，转述）——问题不在当期利润，而在开支与指引。</li>
 </ul>
 
-<h3>大类资产（周五水平，媒体口径约数）</h3>
-<table>
-<tr><th>资产</th><th>水平</th><th>备注</th></tr>
-<tr><td>10 年期美债收益率</td><td>约 4.93%</td><td>周三议息日一度在 5.0% 上方，周五随股市下跌回落</td></tr>
-<tr><td>布伦特原油</td><td>117.64 美元/桶（12 月合约）</td><td>周涨约 0.79%；中东供应扰动支撑，处年内高位区</td></tr>
-<tr><td>COMEX 黄金</td><td>约 3886 美元/盎司</td><td>10 月累跌约 6.5%，月末明显回吐</td></tr>
-<tr><td>VIX</td><td>约 19.4</td><td>与上周基本持平，未进入恐慌区</td></tr>
-</table>
+<h3 class="subhead"><span class="kick">CROSS-ASSET</span>大类资产：油价高位，黄金月末回吐</h3>
+<div class="table-wrap"><table>
+<tr><th>资产</th><th>周五水平</th><th>备注</th></tr>
+<tr><td><strong>布伦特原油（12 月合约）</strong></td><td class="num">117.64 美元/桶</td><td>周涨约 0.79%；中东供应扰动支撑，处年内高位区</td></tr>
+<tr><td><strong>10 年期美债收益率</strong></td><td class="num">约 4.93%</td><td>周一约 5.00%、周三议息日约 5.05%，周五回落</td></tr>
+<tr><td><strong>COMEX 黄金</strong></td><td class="num">约 3886 美元/盎司</td><td>10 月累跌约 6.5%，月末明显回吐（媒体口径约数）</td></tr>
+<tr><td><strong>VIX</strong></td><td class="num">约 19.4</td><td>与上周基本持平，未进入恐慌区</td></tr>
+</table></div>
 </section>
 
-<section class="section" id="weekend">
-<div class="kicker">02 / WEEKEND EVENTS</div>
-<h2>周末要事</h2>
-<ul>
-<li><strong>10 月官方 PMI 回落（10 月 31 日发布）：</strong>制造业 PMI 49.3%（较上月 -0.8 个百分点），非制造业商务活动指数 49.7%（-0.5），综合 PMI 产出指数 49.7%（-1.0），三项均回落至荣枯线下方；统计局解读提到假期前需求提前释放与国际环境复杂多变。<em>可能影响：</em>强化稳增长与内需政策预期，基建、消费情绪相对受益，强周期工业品承压。（国家统计局）</li>
-<li><strong>五中全会公报与发布会落地：</strong>二十届五中全会 10 月 26–29 日举行，审议通过《关于持之以恒推进全面从严治党若干重大问题的决定》，决定党的二十一大于 2027 年下半年召开，增选张升民为中央政治局委员；经济表述强调稳中求进、用好用足宏观政策、深入挖掘内需潜力，确保完成今年主要目标、实现「十五五」良好开局；10 月 30 日中共中央举行新闻发布会解读。<em>可能影响：</em>属中期政策定力信号，关注后续细则与中央经济工作会议铺垫。（新华社、人民日报）</li>
-<li><strong>美股转入冬令时：</strong>11 月 1 日（周日）美国夏令时结束，下周一起美股开盘为北京时间 22:30，盘前数据与财报发布时间整体顺延一小时，简报时间不变。</li>
-<li><strong>科技杀估值余波待消化：</strong>周五纳指 -2.86%、费城半导体大跌，周一 A股/港股开盘需先消化光模块、半导体与中概映射的情绪冲击。</li>
+<section class="section" id="weekend"><div class="section-head"><div class="section-no">02 / WEEKEND EVENTS</div><div><h2>周末要事</h2></div></div>
+<ul class="kl">
+<li><strong>宏观数据</strong><strong>10 月官方 PMI 全面回落（10 月 31 日发布）：</strong>制造业 PMI 49.3%（较上月 -0.8 个百分点），非制造业商务活动指数 49.7%（-0.5），综合 PMI 产出指数 49.7%（-1.0），三项均回落至荣枯线下方；统计局解读提到假期前需求提前释放与国际环境复杂多变。<em>可能影响：</em>强化稳增长与内需政策预期，基建、消费情绪相对受益，强周期工业品承压。（国家统计局）</li>
+<li><strong>政策</strong><strong>五中全会公报与发布会落地：</strong>二十届五中全会 10 月 26–29 日举行，审议通过《关于持之以恒推进全面从严治党若干重大问题的决定》，决定党的二十一大于 2027 年下半年召开，增选张升民为中央政治局委员；经济表述强调稳中求进、用好用足宏观政策、深入挖掘内需潜力，确保完成今年主要目标、实现「十五五」良好开局；10 月 30 日中共中央举行新闻发布会解读。<em>可能影响：</em>属中期政策定力信号，关注后续细则与中央经济工作会议铺垫。（新华社、人民日报）</li>
+<li><strong>交易时间</strong><strong>美股转入冬令时：</strong>11 月 1 日（周日）美国夏令时结束，下周一起美股开盘为北京时间 22:30，盘前数据与财报发布时间整体顺延一小时，本报告的简报时间不变。</li>
+<li><strong>外围余波</strong><strong>科技杀估值待消化：</strong>周五纳指 -2.86%、费城半导体大跌，周一 A股/港股开盘需先消化光模块、半导体与中概映射的情绪冲击；中际旭创等龙头已有主力净买入迹象，分歧大于共识。</li>
 </ul>
 </section>
 
-<section class="section" id="nextweek">
-<div class="kicker">03 / NEXT WEEK</div>
-<h2>下周展望（11 月 2 日至 6 日）</h2>
-<table>
+<section class="section" id="nextweek"><div class="section-head"><div class="section-no">03 / NEXT WEEK</div><div><h2>下周展望（11 月 2 日至 6 日）</h2></div></div>
+<div class="table-wrap"><table>
 <tr><th>日期</th><th>事件</th><th>关注点</th></tr>
 <tr><td><strong>11月2日 周一</strong></td><td>美国 10 月 ISM 制造业 PMI（北京 23:00）；中国 10 月 RatingDog 制造业 PMI（09:45）；<strong>苹果、Palantir 盘后财报</strong>；金融管理部门召开会议研究推动支持资本市场工具使用（媒体日程）；世界互联网大会乌镇峰会开幕（11月2–5日）；美股冬令时首日</td><td>苹果的毛利率与假日季指引是 AI 交易的第一道检验</td></tr>
 <tr><td><strong>11月3日 周二</strong></td><td><strong>美国中期选举</strong>（众议院全部 435 席、参议院 35 席改选）；美国 9 月 JOLTS 职位空缺；澳洲联储利率决议；AMD 等财报</td><td>两院归属影响财政、监管与对华政策预期定价</td></tr>
 <tr><td><strong>11月4日 周三</strong></td><td>美国 10 月 ADP 就业、ISM 服务业 PMI；欧元区 10 月 CPI</td><td>非农前哨与欧洲通胀节奏</td></tr>
 <tr><td><strong>11月5日 周四</strong></td><td>美国初请失业金；英国央行利率决议</td><td>海外央行路径与跨市场利率联动</td></tr>
 <tr><td><strong>11月6日 周五</strong></td><td><strong>美国 10 月非农就业、失业率、平均时薪</strong>（北京 21:30）</td><td>若薪资与就业偏强，12 月加息定价可能回升；偏弱则利好久期与成长估值</td></tr>
-</table>
-<p class="src">来源：21 世纪经济报道、TradingKey、富途一周前瞻等财经日历交叉核对。</p>
-<h3>主线预判（基于已发生事实的情景，非投资建议）</h3>
-<ul>
-<li><strong>选举先行：</strong>中选结果周三亚洲时段逐步明朗，可能先扰动美元、美债长端，再传导到 A/H 开盘。</li>
-<li><strong>苹果定调科技：</strong>若苹果指引强化「投入大、回报慢」，A/H 算力硬件的杀估值可能延续；若毛利率与指引稳住，超跌成长或有反抽窗口。</li>
-<li><strong>国内看政策与资金：</strong>PMI 回落后稳增长预期升温，但南向与主力资金的流出趋势未扭转前，反弹更可能是结构性的。</li>
+</table></div>
+<p class="srcline">来源：21 世纪经济报道、TradingKey、富途一周前瞻等财经日历交叉核对。</p>
+<h4>市场主线预判（基于已发生事实的情景，非投资建议）</h4>
+<ul class="kl">
+<li><strong>选举先行</strong>中选结果周三亚洲时段逐步明朗，可能先扰动美元、美债长端，再传导到 A/H 开盘。</li>
+<li><strong>苹果定调科技</strong>若苹果指引强化「投入大、回报慢」，A/H 算力硬件的杀估值可能延续；若毛利率与指引稳住，超跌成长或有反抽窗口。</li>
+<li><strong>国内看政策与资金</strong>PMI 回落后稳增长预期升温，但南向与主力资金的流出趋势未扭转前，反弹更可能是结构性的。</li>
 </ul>
-</section>
-
-<section class="section" id="risks">
-<div class="kicker">04 / RISKS</div>
-<h2>需要关注的风险点</h2>
-<ul>
+<div class="caveats risk"><h3>需要关注的风险点</h3><ul>
 <li><strong>AI 资本开支叙事：</strong>四大巨头单季资本开支合计已超过经营现金流，市场开始按自由现金流而非收入增速定价，任何一家指引再下修都会外溢到亚太供应链。</li>
 <li><strong>中期选举不确定性：</strong>两院格局变化会迅速重定价财政扩张与监管，波动可能在周三集中释放。</li>
 <li><strong>油价与通胀黏性：</strong>布伦特在 117 美元上方，叠加美联储仍有两位委员主张加息，限制了联储转鸽空间。</li>
 <li><strong>资金面未修复：</strong>A股主力一周流出超 1260 亿元、周上涨家数不足一成半；南向 10 月流出近 280 亿港元，情绪修复需要增量资金确认。</li>
 <li><strong>国内景气回落：</strong>制造业 PMI 降至 49.3%，若后续内需数据继续偏弱，周期与中小盘盈利预期仍有下修压力。</li>
-</ul>
+</ul></div>
 </section>
 
+<section class="section" id="checklist"><div class="section-head"><div class="section-no">04 / VERIFY NEXT WEEK</div><div><h2>下周验证清单</h2></div></div>
+<div class="caveats tip"><h3>本期新增：把预判写成可核对的问题，下期周报逐项回看</h3><ul>
+<li><strong>苹果指引：</strong>周一盘后苹果的毛利率与假日季指引，是否进一步强化「投入大、回报慢」叙事？判定看周二 A/H 消费电子与光模块链的反应方向。</li>
+<li><strong>南向止流：</strong>南向资金是否结束连续净卖出（截至周五已连续 13 个交易日）？判定以港交所每日净额为准，出现单日净买入即算结束。</li>
+<li><strong>非农与加息定价：</strong>周五非农后，联邦基金期货对 12 月加息的定价是否明显升温？判定看非农公布前后 CME FedWatch 概率变化与长端美债反应。</li>
+</ul><p>下期周末版将逐项回看这三条，兑现、落空都如实标注，不删改本期原文。</p></div>
+</section>
+
+<div class="caveats"><h3>数据说明</h3><p>指数收盘与涨跌幅至少经两个独立来源核对一致才写入；口径冲突（如主力资金的日度分项在不同转载间有小额出入）时采用原始发布方（证券时报·数据宝）口径并注明。字段核不到的，本期处理如下：北证50 周涨跌无可靠单一来源，未写；COMEX 黄金、VIX、标普等权周涨幅为媒体口径约数；费城半导体指数单日跌幅各来源口径不一（-8% 至 -11%），未写死。南向周度合计为按每日净额加总，与官方周度汇总口径可能有小额差异。美股冬令时自 11 月 1 日起。本报告不构成投资建议。</p></div>
 </main>
-<footer><div class="wrap">
-数据说明：A股周涨跌、主力资金与行业涨跌以证券时报·数据宝 10 月 30 日周报为主，每日指数与成交以同花顺、新华财经收盘报道交叉核对；港股周涨跌以华盛通/TradingKey 周报为准，南向周合计约 110 亿港元为每日数据加总，与 Wind 周报口径可能略有出入，10 月合计以 Wind 约 279.51 亿港元为准；美股点位与个股表现以 CNBC、Sharecast、Invezz 收盘报道为准，周涨跌由上周五收盘价计算核对，等权指数与板块广度为周评媒体口径。大类资产为媒体口径约数，不同合约与发稿时点略有差异。北证50 周涨跌未核实到可靠单一来源，未写死数字。<br>
-本报告由 Juno 生成，只写能找到可靠来源的内容；核验不了的数字不写死或标注未核实。内容不构成投资建议。
-</div></footer>
+<footer><div class="wrap"><div class="footer-line"><span>Stocks Reports · 三地市场周报由 Juno 生成，数据来源见正文标注</span><span>完整版网页：isymbo.github.io/stocks_reports</span></div></div></footer>
 </body>
+
 </html>
