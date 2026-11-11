@@ -21,6 +21,12 @@ li a:hover{background:rgba(192,57,43,.05)}
 .t{font-family:"Songti SC","Noto Serif SC",Georgia,serif;font-size:17px}
 .empty{color:var(--mute);padding:18px 4px;border-bottom:1px solid var(--line)}
 footer{margin-top:40px;font-size:12px;color:var(--mute)}
+.pager{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pager button,.pager .cur{font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:3px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.pager button:hover{border-color:var(--red);color:var(--red)}
+.pager button:disabled{opacity:.35;cursor:default;color:var(--ink);border-color:var(--line)}
+.pager .cur{background:var(--ink);color:var(--bg);border-color:var(--ink);cursor:default}
+.pager .info{width:100%;font-size:12px;color:var(--mute);margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -58,7 +64,57 @@ footer{margin-top:40px;font-size:12px;color:var(--mute)}
 <li><a href="reports/2026-11-02-morning.html"><span class="d">2026-11-02</span><span class="k k-m">早报</span><span class="t">三地市场早报 2026年11月2日 周一</span></a></li>
 <li><a href="reports/2026-11-01-weekend.html"><span class="d">2026-11-01</span><span class="k k-w">周末版</span><span class="t">三地市场周末版 10月26日至30日这一周</span></a></li>
 </ul>
+<nav class="pager" id="pager" aria-label="分页" hidden></nav>
 <footer>数据均经双源核验；核验不了的数字不写或标注未核实。本页内容不构成投资建议。</footer>
+<script>
+(function(){
+  var DAYS_PER_PAGE=7; // 每页 7 天（按有报告的日期计）
+  var ul=document.querySelector('ul');
+  var nav=document.getElementById('pager');
+  if(!ul||!nav) return;
+  var items=Array.prototype.slice.call(ul.querySelectorAll('li')).filter(function(li){return li.querySelector('.d');});
+  if(!items.length) return;
+  var dates=[];
+  items.forEach(function(li){
+    var d=li.querySelector('.d').textContent.trim();
+    li.setAttribute('data-date',d);
+    if(dates.indexOf(d)<0) dates.push(d);
+  });
+  var pages=[];
+  for(var i=0;i<dates.length;i+=DAYS_PER_PAGE) pages.push(dates.slice(i,i+DAYS_PER_PAGE));
+  if(pages.length<=1) return;
+  function readPage(){
+    var m=/[?&]page=(\d+)/.exec(location.search)||/#page-(\d+)/.exec(location.hash);
+    var n=m?parseInt(m[1],10):1;
+    return (n>=1&&n<=pages.length)?n:1;
+  }
+  function render(){
+    var cur=readPage();
+    var show={}; pages[cur-1].forEach(function(d){show[d]=1;});
+    items.forEach(function(li){ li.style.display=show[li.getAttribute('data-date')]?'':'none'; });
+    var range=pages[cur-1];
+    var html='<span class="info">每页 7 天 · 第 '+cur+' / '+pages.length+' 页 · 本页 '+range[range.length-1]+' 至 '+range[0]+'（共 '+items.length+' 期）</span>';
+    html+='<button type="button" data-go="'+(cur-1)+'"'+(cur<=1?' disabled':'')+'>← 较新</button>';
+    for(var p=1;p<=pages.length;p++){
+      html+= (p===cur) ? '<span class="cur">'+p+'</span>' : '<button type="button" data-go="'+p+'">'+p+'</button>';
+    }
+    html+='<button type="button" data-go="'+(cur+1)+'"'+(cur>=pages.length?' disabled':'')+'>较旧 →</button>';
+    nav.innerHTML=html; nav.hidden=false;
+    Array.prototype.forEach.call(nav.querySelectorAll('button[data-go]'),function(b){
+      b.addEventListener('click',function(){
+        var n=parseInt(b.getAttribute('data-go'),10);
+        if(n<1||n>pages.length) return;
+        var url=location.pathname+'?page='+n+location.hash;
+        history.pushState(null,'',url);
+        render(); window.scrollTo(0,0);
+      });
+    });
+  }
+  window.addEventListener('popstate',render);
+  window.addEventListener('hashchange',render);
+  render();
+})();
+</script>
 </div>
 </body>
 </html>
